@@ -12,7 +12,7 @@ $(document).ready(function (){
   });
 
   $(document.body).keydown(function (e){
-    if(e.which == 13 && window.getSelection().toString().length > 0){
+    if(window.getSelection().toString().length > 0 && e.which == 13){
       var el =  window.getSelection().focusNode.parentElement;
       if(selectedEl.tagName != 'HTML'){
         selectedEl = el;
